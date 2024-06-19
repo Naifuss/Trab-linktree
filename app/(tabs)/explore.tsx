@@ -26,8 +26,9 @@ export default function TabTwoScreen() {
         style={styles.iconebotao}
         />
         <View style={styles.botaoseparador}/>
-        <Text style={styles.textobotao}>E-Mail</Text>
+        <Text style={styles.botaotexto}>E-Mail</Text>
       </TouchableOpacity>
+
       <ThemedText>Whatsapp</ThemedText>
       <ThemedText>Instagram</ThemedText>
       <ThemedText>Linkedin</ThemedText>
@@ -64,21 +65,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#485a96',
     borderWidth: 0.5,
     borderColor: 'fff',
-    height: 40,
+    height: 50,
     borderRadius: 5,
     margin: 5,
   },
   iconebotao:{
     padding: 10,
     margin: 5,
-    height: 25,
-    width: 25,
+    height: 30,
+    width: 30,
     resizeMode:'stretch',
   },
-  textobotao:{
-    color:'fff',
+  botaotexto:{
+    shadowColor:'fff',
     marginBottom: 4,
     marginLeft: 10,
+   
   },
   botaoseparador:{
     backgroundColor:'fff',
