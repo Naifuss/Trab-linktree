@@ -10,7 +10,7 @@ import { ThemedView } from '@/components/ThemedView';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#525574' }}
       headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}
@@ -29,15 +29,59 @@ export default function TabTwoScreen() {
         <Text style={styles.botaotexto}>E-Mail</Text>
       </TouchableOpacity>
 
-      <ThemedText>Whatsapp</ThemedText>
-      <ThemedText>Instagram</ThemedText>
-      <ThemedText>Linkedin</ThemedText>
-      <ThemedText>Twitter/x</ThemedText>
-      <ThemedText>Facebook</ThemedText>
-      <ThemedText>Tiktok</ThemedText>
-      <ThemedText>Pinterest</ThemedText>
-      <ThemedText>Github</ThemedText>
       
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/whatsapp.png')}
+        style={styles.iconebotao}
+        />
+          <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Whatsapp</Text>
+      </TouchableOpacity>
+
+      
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/instagram.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Instagram</Text>
+      </TouchableOpacity>
+
+
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/linkedin.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Linkedin</Text>
+      </TouchableOpacity>
+
+      
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/twitter.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Twitter/X</Text>
+      </TouchableOpacity>
+
+
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/pinterest.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Pinterest</Text>
+      </TouchableOpacity>
+      
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/github.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.botaotexto}>Github</Text>
+      </TouchableOpacity>
+
     </ParallaxScrollView>
   );
 }
@@ -62,7 +106,7 @@ const styles = StyleSheet.create({
   estilobotao:{
     flexDirection:'row',
     alignItems:'center',
-    backgroundColor: '#485a96',
+    backgroundColor: '#525574',
     borderWidth: 0.5,
     borderColor: 'fff',
     height: 50,
@@ -77,10 +121,9 @@ const styles = StyleSheet.create({
     resizeMode:'stretch',
   },
   botaotexto:{
-    shadowColor:'fff',
+    color: '#fff',
     marginBottom: 4,
-    marginLeft: 10,
-   
+    marginLeft: 10,  
   },
   botaoseparador:{
     backgroundColor:'fff',
