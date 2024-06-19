@@ -1,5 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform,TouchableOpacity,View, Text } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -20,7 +20,14 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Redes Sociais</ThemedText>
       </ThemedView>
-      <ThemedText>E-Mail</ThemedText>
+
+      <TouchableOpacity style={styles.estilobotao} activeOpacity={0.5}>
+        <Image source={require('../../assets/images/gmail.png')}
+        style={styles.iconebotao}
+        />
+        <View style={styles.botaoseparador}/>
+        <Text style={styles.textobotao}>E-Mail</Text>
+      </TouchableOpacity>
       <ThemedText>Whatsapp</ThemedText>
       <ThemedText>Instagram</ThemedText>
       <ThemedText>Linkedin</ThemedText>
@@ -50,5 +57,32 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 40,
     position: 'absolute',
+  },
+  estilobotao:{
+    flexDirection:'row',
+    alignItems:'center',
+    backgroundColor: '#485a96',
+    borderWidth: 0.5,
+    borderColor: 'fff',
+    height: 40,
+    borderRadius: 5,
+    margin: 5,
+  },
+  iconebotao:{
+    padding: 10,
+    margin: 5,
+    height: 25,
+    width: 25,
+    resizeMode:'stretch',
+  },
+  textobotao:{
+    color:'fff',
+    marginBottom: 4,
+    marginLeft: 10,
+  },
+  botaoseparador:{
+    backgroundColor:'fff',
+    width: 1,
+    height: 40,
   },
 });
