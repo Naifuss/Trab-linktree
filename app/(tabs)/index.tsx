@@ -11,8 +11,8 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/eita.png')}
+          style={styles.headerImage}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -21,21 +21,14 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Esse é um protótipo de linktree</ThemedText>
-        <ThemedText>
-
+        <ThemedText style={styles.justifiedText}>
+          Linktree é uma ferramenta popular que permite aos usuários criar uma página personalizada contendo múltiplos links. 
+          Esta página é especialmente útil para perfis de redes sociais, onde geralmente é permitido adicionar apenas um único link 
+          na biografia.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle"></ThemedText>
-        <ThemedText>
-         
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle"></ThemedText>
-        <ThemedText>
-        
-        </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
   )
@@ -48,8 +41,13 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   stepContainer: {
-    gap: 8,
+    gap: 14,
     marginBottom: 8,
+  },
+  headerImage: {
+    height: '100%',
+    width: '100%',
+    resizeMode: 'cover',
   },
   reactLogo: {
     height: 250,
@@ -57,5 +55,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 40,
     position: 'absolute',
+  },
+  justifiedText: {
+    textAlign: 'justify',
+    fontSize: 18,
   },
 });
